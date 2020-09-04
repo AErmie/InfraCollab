@@ -21,6 +21,7 @@ LABEL version="0.0.1"
 LABEL author="Adin Ermie"
 
 RUN apt-get update
-RUN apt-get -qq -y install curl
+RUN apt-get upgrade
+RUN apt-get install -qq -y install curl
 # Install Zip utility
-RUN apt-get install zutils
+RUN apt-get install -y zutils lzip xz-utils
