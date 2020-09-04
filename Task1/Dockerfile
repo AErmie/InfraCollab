@@ -16,12 +16,12 @@
 FROM ubuntu:18.04
 
 # Set one or more individual labels
-LABEL description="Ubuntu 18.04 image with Zip utility"
-LABEL version="0.0.1"
-LABEL author="Adin Ermie"
+# LABEL description="Ubuntu 18.04 image with Zip utility"
+# LABEL version="0.0.1"
+# LABEL author="Adin Ermie"
 
-RUN apt-get update
-RUN apt-get upgrade
-RUN apt-get install -qq -y install curl
-# Install Zip utility
-RUN apt-get install -y zutils lzip xz-utils
+# RUN apt-get update
+# RUN apt-get upgrade
+# RUN apt-get install -qq -y install curl
+# # Install Zip utility
+# RUN apt-get install -y zutils lzip xz-utils
