@@ -26,6 +26,6 @@ stages:
         command: buildAndPush
         repository: 'infracollab'
         dockerfile: '$(Build.SourcesDirectory)/Task1/Dockerfile'
-        containerRegistry: infracollab.azurecr.io
+        containerRegistry: 'InfraCollab Azure Container Registry'
         tags: |
           $(tag)
