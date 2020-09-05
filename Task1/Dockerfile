@@ -15,8 +15,4 @@
 
 FROM ubuntu:18.04
 
-RUN apt-get update -y
-RUN apt-get install -y lzip
-
-# RUN apt-get install -qq -y install curl
-# RUN apt-get install -y zutils lzip xz-utils
+RUN apt-get update -y && apt-get install -y lzip
