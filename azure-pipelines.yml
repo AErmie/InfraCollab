@@ -16,10 +16,10 @@ variables:
   dockerRegistryServiceConnection: 'InfraCollab Azure Container Registry'
 
 stages:
-- stage: Build_and_Push_Container_Image
+- stage: BuildAndPushContainerImage
   displayName: Build and Push Container Image
   jobs:  
-  - job: Build and Push
+  - job: Build_and_Push
     displayName: Build and Push
     pool:
       vmImage: 'ubuntu-latest'
