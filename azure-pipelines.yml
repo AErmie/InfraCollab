@@ -16,7 +16,7 @@ variables:
   dockerRegistryServiceConnection: 'InfraCollab Azure Container Registry'
 
 stages:
-- stage: Build and Push Container Image
+- stage: Build_and_Push_Container_Image
   displayName: Build and Push Container Image
   jobs:  
   - job: Build and Push
