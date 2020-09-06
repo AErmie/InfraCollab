@@ -9,9 +9,8 @@ resources:
 - repo: self
 
 variables:
-  tag: |
-    '$(Build.BuildId)'
-    '$(Build.BuildNumber)'
+  BuildID: '$(Build.BuildId)'
+  BuildNumber: '$(Build.BuildNumber)'
   imageRepository: 'infracollab'
   dockerRegistryServiceConnection: 'InfraCollab Azure Container Registry'
 
@@ -32,7 +31,8 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Task1/Dockerfile'
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          $(BuildID)
+          $(BuildNumber)
 
     - task: Docker@2
       displayName: Push Container Image
@@ -41,4 +41,5 @@ stages:
         repository: $(imageRepository)
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
-          $(tag)
+          $(BuildID)
+          $(BuildNumber)
